@@ -1,0 +1,96 @@
+﻿<Window x:Class="Tema3_EquiposNBA_Estilos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_EquiposNBA_Estilos"
+        mc:Ignorable="d"
+        Title="Equipos NBA con estilos" Height="450" Width="800" MinWidth="175">
+    <Window.Resources>
+        <Style x:Key="LosAngelesBordeStyle" TargetType="Border">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5604BD"/>
+                        <GradientStop Color="#FFFFE25B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MiamiHeatBordeStyle" TargetType="Border">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFAD0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="LosAngelesTituloStyle" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="MiamiTituloStyle" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="ImagenesStyle" TargetType="WrapPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="StackPanelStyle" TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="ImageStyle" TargetType="Image">
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Width" Value="150"/>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+        <Border x:Name="losAngelesBorder" Style="{StaticResource LosAngelesBordeStyle}">
+            <StackPanel Style="{StaticResource StackPanelStyle}">
+                <TextBlock Style= "{StaticResource LosAngelesTituloStyle}" >Los Angeles Lakers</TextBlock>
+                <WrapPanel>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/9_lakers.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/14_lakers.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/23_lakers.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/3_lakers.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/39_lakers.png"></Image>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="miamiHeatBorder" Style="{StaticResource MiamiHeatBordeStyle}">
+            <StackPanel Style="{StaticResource StackPanelStyle}">
+                <TextBlock Style= "{StaticResource MiamiTituloStyle}" >Miami Heat</TextBlock>
+                <WrapPanel>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/7_heat.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/13_heat.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/14_heat.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/22_heat.png"></Image>
+                    <Image Style="{StaticResource ImageStyle}" Source="/Resources/99_heat.png"></Image>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Window>
