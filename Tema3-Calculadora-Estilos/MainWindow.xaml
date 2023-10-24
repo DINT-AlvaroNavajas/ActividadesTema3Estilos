@@ -19,6 +19,7 @@
         
         <Style TargetType="TextBlock" x:Key="NumerosTextBlockStyle">
             <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="HorizontalAlignment" Value="Right" />
         </Style>
         
         

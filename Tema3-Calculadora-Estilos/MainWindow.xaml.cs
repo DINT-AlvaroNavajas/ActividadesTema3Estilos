@@ -27,7 +27,8 @@ namespace Tema3_Calculadora_Estilos
 
         private void boton_Click(object sender, RoutedEventArgs e)
         {
-            numerosTextBlock.Text += sender.ToString();
+            Button boton = (Button)sender;
+            numerosTextBlock.Text += boton.Content.ToString();
         }
     }
 }
